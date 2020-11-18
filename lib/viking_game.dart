@@ -63,6 +63,7 @@ class EvilContactCallback extends ContactCallback<Viking, EvilViking> {
   @override
   void begin(Viking viking, EvilViking evilViking, Contact contact) {
     viking.smacked = true;
+    evilViking.timeToReset = 2.0;
   }
 
   @override

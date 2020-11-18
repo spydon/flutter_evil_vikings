@@ -53,21 +53,17 @@ packages:
   flame:
     dependency: "direct main"
     description:
-      path: "."
-      ref: "spydon.unify-removal"
-      resolved-ref: c9e8a5b77d8848be8cd4e147ace575917b6167b6
-      url: "https://github.com/flame-engine/flame.git"
-    source: git
-    version: "1.0.0-rc1"
+      name: flame
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.0-rc2"
   flame_forge2d:
     dependency: "direct main"
     description:
-      path: "."
-      ref: "spydon.simplify-rendering"
-      resolved-ref: "3cc26c121494128d32c0dcaee5b088e9cdc4b0a2"
-      url: "https://github.com/flame-engine/flame_forge2d.git"
-    source: git
-    version: "0.0.1-rc1"
+      name: flame_forge2d
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.5.0-rc1"
   flutter:
     dependency: "direct main"
     description: flutter

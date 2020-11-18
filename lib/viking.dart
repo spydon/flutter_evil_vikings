@@ -38,6 +38,7 @@ class Viking extends SpriteBodyComponent {
     bodyDef.position = viewport.getScreenToWorld(startPosition);
     bodyDef.angle = Random().nextDouble() * 2 * 3.14;
     bodyDef.type = BodyType.DYNAMIC;
+    bodyDef.setAngularDamping(1.0);
     return world.createBody(bodyDef)..createFixture(fixtureDef);
   }
   
@@ -55,6 +56,14 @@ class Viking extends SpriteBodyComponent {
 }
 
 class EvilViking extends Viking {
+  double timeToReset = 0;
+
   EvilViking(Vector2 startPosition, Image image) : super(startPosition, image);
+  
+  @override
+  void update(double dt) {
+    super.update(dt);
+    timeToReset = max(0.0, timeToReset - dt);
+  }
 }
 
